@@ -1,8 +1,12 @@
 <template>
-  <!-- <a :href="link" target="_blank">
-    {{ name }}
-  </a> -->
-  <svg-icon :name="name" :title="name" :desc="`My ${name} profile`" width="60%" height="100px"/>
+  <a :href="link" target="_blank">
+    <svg-icon
+        :name="name"
+        :title="name"
+        :desc="`My ${name} profile`"
+        width="60%"
+        height="100px"/>
+  </a>
 </template>
 
 <script>

@@ -1,56 +1,59 @@
 <template>
-  <v-container
-    grid-list-md
-    row
-    fluid
-  >
-    <!-- Header Section -->
-    <v-layout
+  <v-container fluid>
+      <!-- Header Section -->
+    <v-container
       row
-      wrap
-      align-center
+      fluid
       class="header"
     >
-      <v-flex xs12 md6 justify-left>
-        <Title :text="'Iru Hernández'" />
-        <Subtitle :text="'Front End Developer'" />
       <v-layout
         row
         wrap
-        justify-left
+        align-center
       >
-        <v-flex
-          v-for="media in socialMedia"
-          :key="media.id"
-          xs6
-          md2
-        >
-          <SocialMedia :name="media.name" :link="media.link" />
+        <v-flex xs12 md6 justify-left>
+          <Title :text="'Iru Hernández'" />
+          <Subtitle :text="'Front End Developer'" />
+          <v-layout
+            row
+            wrap
+            justify-left
+          >
+            <v-flex
+              v-for="media in socialMedia"
+              :key="media.id"
+              xs6
+              md2
+            >
+              <SocialMedia :name="media.name" :link="media.link" />
+            </v-flex>
+          </v-layout>
+        </v-flex>
+        <v-flex text-xs-center xs12 md6 justify-end>
+          <Picture />
         </v-flex>
       </v-layout>
-      </v-flex>
-      <v-flex text-xs-center xs12 md6 justify-end>
-        <Picture />
-      </v-flex>
-    </v-layout>
+    </v-container>
     <!-- Content Section -->
-    <v-layout
-      row
-      wrap
-      align-center
-      justify-center
-      class="content"
-      style="height: 80%">
-      <v-flex
-        xs12
-        :key="section.id"
-        v-for="section in sections">
-            <SectionBanner :id="section.id" :title="section.title" @click.native="toggleSection(section.id)"/>
-            <v-fade-transition>
-              <SectionContent v-show="section.toggle" :id="section.id" :description="section.description"/>
-            </v-fade-transition>
-      </v-flex>
-    </v-layout>
+    <v-container row>
+      <v-layout
+        row
+        wrap
+        align-center
+        justify-center
+        style="height: 80%">
+        <v-flex
+          xs12
+          :key="section.id"
+          v-for="section in sections"
+          class="content">
+              <SectionBanner :id="section.id" :title="section.title" @click.native="toggleSection(section.id)"/>
+              <v-fade-transition>
+                <SectionContent v-show="section.toggle" :id="section.id" :description="section.description"/>
+              </v-fade-transition>
+        </v-flex>
+      </v-layout>
+    </v-container>
   </v-container>
 </template>
 
@@ -99,7 +102,7 @@ export default {
                 {
                     id: 1,
                     title: '¿Quién soy?',
-                    description: 'Soy Iru orem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.',
+                    description: 'Soy Iru orem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. ',
                     posts: [],
                     toggle: false
                 },
@@ -136,13 +139,25 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
+.container {
+  padding: 0;
+  // margin 0;
+}
+
 .header {
   background-color: #303030;
   color: white;
   padding: 2% 10%;
-  width:100%
+  width:100%;
+  margin-bottom: 1%;
 }
+
 .content {
-  padding: 0 !important;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    max-width: 100%;
 }
 </style>
