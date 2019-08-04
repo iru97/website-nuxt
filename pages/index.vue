@@ -11,14 +11,12 @@
         wrap
         align-center
       >
-        <v-flex xs12 md6 justify-left>
+        <v-flex xs12 md6>
           <Title :text="'Iru Hernández'" />
           <Subtitle :text="'Front End Developer'" />
           <v-layout
             row
-            wrap
-            justify-left
-          >
+            wrap>
             <v-flex
               v-for="media in socialMedia"
               :key="media.id"
@@ -29,7 +27,7 @@
             </v-flex>
           </v-layout>
         </v-flex>
-        <v-flex text-xs-center xs12 md6 justify-end>
+        <v-flex row xs12 md6>
           <Picture />
         </v-flex>
       </v-layout>
@@ -130,6 +128,9 @@ export default {
             ]
         }
     },
+    created() {
+      this.sections[0].toggle = true
+    },
     methods: {
       toggleSection(id) {
         const section = this.sections.find(s => s.id === id)
@@ -147,7 +148,7 @@ export default {
 .header {
   background-color: #303030;
   color: white;
-  padding: 2% 10%;
+  padding: 0 10%;
   width:100%;
   margin-bottom: 1%;
 }

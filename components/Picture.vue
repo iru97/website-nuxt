@@ -1,7 +1,7 @@
 <template>
   <img
     :src="image"
-    width="40%"
+    width="50%"
     alt="Iru Hernandez"
     class="profile"
     @mouseover="changeImageValue('profile_boo')"
@@ -13,19 +13,19 @@
 export default {
     data() {
         return {
-            image: require('../assets/images/profile.jpg')
+            image: require('../assets/images/profile.png')
         }
     },
     methods: {
         changeImageValue(image) {
-            this.image = require(`../assets/images/${image}.jpg`)
+            this.image = require(`../assets/images/${image}.png`)
         }
     }
 }
 </script>
 
 <style lang="stylus" scoped>
-.profile{
-    border-radius: 50%;
+img {
+  display: block;
 }
 </style>
