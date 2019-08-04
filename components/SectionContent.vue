@@ -1,14 +1,14 @@
 <template>
-<div class="banner">
-  <h3>{{ title }}</h3>
+<div class="sectionContent">
+  <p>{{ description }}</p>
 </div>
 </template>
 
 <script>
 export default {
-    name: 'SectionBanner',
+    name: 'SectionContent',
     props: {
-        title: {
+        description: {
             type: String,
             required: true
         },
@@ -21,12 +21,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-    .banner {
-        color: white;
-        background-color: #303030;
+    .sectionContent {
         padding: 1% 5%;
     }
-    .banner > h3 {
-        font-size: 45px;
+    .sectionContent > p {
+        font-size: 30px;
     }
 </style>

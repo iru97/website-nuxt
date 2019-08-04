@@ -1,7 +1,7 @@
 <template>
   <img
     :src="image"
-    width="50%"
+    width="40%"
     alt="Iru Hernandez"
     class="profile"
     @mouseover="changeImageValue('profile_boo')"

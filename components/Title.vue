@@ -1,6 +1,6 @@
 <template>
   <div class="title">
-    {{ text }}
+    <h1>{{ text }}</h1>
   </div>
 </template>
 
@@ -17,5 +17,7 @@ export default {
 </script>
 
 <style scoped>
-
+.title > h1 {
+    font-size: 110px;
+}
 </style>

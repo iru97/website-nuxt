@@ -1,7 +1,7 @@
 <template>
-  <h1 class="subtitle">
-    {{ text }}
-  </h1>
+  <div class="subtitle">
+    <h2>{{ text }}</h2>
+  </div>
 </template>
 
 <script>
@@ -17,5 +17,7 @@ export default {
 </script>
 
 <style scoped>
-
+.subtitle > h2 {
+    font-size: 50px;
+}
 </style>
