@@ -62,12 +62,6 @@ const Title = () => import('../components/Title.vue')
 const Subtitle = () => import('../components/Subtitle.vue')
 const SectionBanner = () => import('../components/SectionBanner.vue')
 const SectionContent = () => import('../components/SectionContent.vue')
-// import Picture from '../components/Picture.vue'
-// import SocialMedia from '../components/SocialMedia.vue'
-// import Title from '../components/Title.vue'
-// import Subtitle from '../components/Subtitle.vue'
-// import SectionBanner from '../components/SectionBanner.vue'
-// import SectionContent from '../components/SectionContent.vue'
 
 export default {
     components: {

@@ -16,21 +16,5 @@ export default {
 </script>
 
 <style lang="stylus">
-// @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-//   * {
-//       font-family: 'Quicksand', sans-serif !important;
-//   }
-// @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap');
-//   * {
-//       font-family: 'Alegreya Sans', sans-serif !important;
-//   }
-@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
-  * {
-      font-family: 'Abel', sans-serif !important;
-  }
-// @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
-//   * {
-//       font-family: 'Questrial', sans-serif !important;
-//   }
 
 </style>
