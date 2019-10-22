@@ -1,7 +1,6 @@
 <template>
   <img
     :src="image"
-    width="50%"
     alt="Iru Hernandez"
     class="profile"
     @mouseover="changeImageValue('profile_boo')"
@@ -25,6 +24,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.profile{
+    max-width: 25rem;
+}
 img {
   display: block;
 }

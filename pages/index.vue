@@ -56,12 +56,18 @@
 </template>
 
 <script>
-import Picture from '../components/Picture.vue'
-import SocialMedia from '../components/SocialMedia.vue'
-import Title from '../components/Title.vue'
-import Subtitle from '../components/Subtitle.vue'
-import SectionBanner from '../components/SectionBanner.vue'
-import SectionContent from '../components/SectionContent.vue'
+const Picture = () => import('../components/Picture.vue')
+const SocialMedia = () => import('../components/SocialMedia.vue')
+const Title = () => import('../components/Title.vue')
+const Subtitle = () => import('../components/Subtitle.vue')
+const SectionBanner = () => import('../components/SectionBanner.vue')
+const SectionContent = () => import('../components/SectionContent.vue')
+// import Picture from '../components/Picture.vue'
+// import SocialMedia from '../components/SocialMedia.vue'
+// import Title from '../components/Title.vue'
+// import Subtitle from '../components/Subtitle.vue'
+// import SectionBanner from '../components/SectionBanner.vue'
+// import SectionContent from '../components/SectionContent.vue'
 
 export default {
     components: {
@@ -72,8 +78,8 @@ export default {
         SectionBanner,
         SectionContent
     },
-    data() {
-        return {
+    asyncData() {
+return {
             socialMedia: [
                 {
                     id: 1,
@@ -100,27 +106,26 @@ export default {
                 {
                     id: 1,
                     title: '¿Quién soy?',
-                    description: 'Soy Iru orem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. ',
-                    posts: [],
+                    description: 'Hola, me llamo Iru Hernández, me voy a presentar rápidamente. Soy una persona apasionado por esto del desarrollo web, principalmente me centro en tecnologías javascript como puedes ver, he trabajado con VueJS, Angular2+, NuxtJS, Bootstrap, NodeJS y ExpressJS entre otras. Soy un chico de 22 años que vive en las Islas Canarias, soy una persona que busca la mejora continua y el crecimiento personal y profesional, me gusta estar activo por redes, suelo participar en eventos locales y si puedo asistir a nacionales también lo hago.',
                     toggle: false
                 },
                 {
                     id: 2,
                     title: 'Eventos',
-                    description: 'Aquí los eventos',
+                    description: 'Algunos eventos a los que he asistido',
                     posts: [],
                     toggle: false
                 },
                 {
                     id: 3,
                     title: 'Charlas',
-                    description: 'Mis charlistas',
+                    description: 'A veces doy charlas, aunque estoy empezando en esto',
                     posts: [],
                     toggle: false
                 },
                 {
                     id: 4,
-                    title: 'Formación',
+                    title: 'Me gusta tener una formación continuada para mejorar en todos los aspectos posibles, aquí te enseño un poco de lo que hago.',
                     description: 'Mi formación',
                     posts: [],
                     toggle: false
@@ -150,6 +155,7 @@ export default {
   color: white;
   padding: 0 10%;
   width:100%;
+  max-height: 40rem;
   margin-bottom: 1%;
 }
 
