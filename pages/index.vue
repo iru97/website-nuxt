@@ -119,8 +119,8 @@ return {
                 },
                 {
                     id: 4,
-                    title: 'Me gusta tener una formación continuada para mejorar en todos los aspectos posibles, aquí te enseño un poco de lo que hago.',
-                    description: 'Mi formación',
+                    title: 'Formación',
+                    description: 'Me gusta tener una formación continuada para mejorar en todos los aspectos posibles, aquí te enseño un poco de lo que hago.',
                     posts: [],
                     toggle: false
                 }
