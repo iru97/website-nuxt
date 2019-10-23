@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" target="_blank">
+  <a :href="link" target="_blank" rel="noreferrer">
     <svg-icon
         :name="name"
         :title="name"
