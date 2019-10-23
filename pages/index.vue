@@ -139,6 +139,10 @@ return {
 }
 </script>
 <style lang="stylus" scoped>
+* {
+      font-family: 'Abel', sans-serif !important;
+  }
+
 .container {
   padding: 0;
   // margin 0;
