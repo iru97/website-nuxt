@@ -31,7 +31,7 @@
           <Picture />
         </v-flex>
       </v-layout>
-    </v-container>
+    </div>
     <!-- Content Section -->
     <div class="content">
       <v-layout
@@ -51,8 +51,8 @@
               </v-fade-transition>
         </v-flex>
       </v-layout>
-    </v-container>
-  </v-container>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -139,10 +139,10 @@ return {
 }
 </script>
 <style lang="stylus" scoped>
-.container {
-  padding: 0;
-  // margin 0;
-}
+// .container {
+//   padding: 0;
+//   // margin 0;
+// }
 
 .container {
   display: grid;
@@ -152,7 +152,13 @@ return {
   grid-row-gap: 0px;
 }
 
-.header { grid-area: 1 / 1 / 2 / 6; }
+.header {
+  grid-area: 1 / 1 / 2 / 6;
+  background-color: #303030;
+  color: white;
+  padding: 0 10%;
+  width:100%;
+}
 .content { grid-area: 2 / 1 / 6 / 6; }
 
 // .header {
