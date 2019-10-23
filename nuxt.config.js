@@ -41,6 +41,7 @@ export default {
   ** Plugins to load before mounting the App
   */
     plugins: [
+        { src: '~plugins/ga.js', ssr: false }
     ],
     /*
   ** Nuxt.js modules
@@ -51,7 +52,10 @@ export default {
         '@nuxtjs/axios',
         '@nuxtjs/eslint-module',
         '@nuxtjs/svg-sprite',
-        '@nuxtjs/pwa'
+        '@nuxtjs/pwa',
+        ['@nuxtjs/google-analytics', {
+            id: 'UA-150832506-1'
+        }]
     ],
     /*
   ** Axios module configuration
