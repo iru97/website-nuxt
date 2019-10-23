@@ -9,21 +9,105 @@
         "id": 2,
         "title": "Eventos",
         "description": "Algunos eventos a los que he asistido",
-        "posts": [],
+        "posts": [
+            {
+                "title": "JS Day Canarias III",
+                "description": "El JS Day de Canarias se ha convertido en uno de los mayores eventos a nivel nacional, tanto en calidad de eventp, organización y ponentes. Tengo el placer de haber podido asistir a todas sus ediciones y de que en esta edición hayan contado conmigo para formar parte del staff de la organización",
+                "image": "",
+                "link": ""
+            },
+            {
+                "title": "Commit conf 2019",
+                "description": "El JS Day de Canarias se ha convertido en uno de los mayores eventos a nivel nacional, tanto en calidad de eventp, organización y ponentes. Tengo el placer de haber podido asistir a todas sus ediciones y de que en esta edición hayan contado conmigo para formar parte del staff de la organización",
+                "image": "",
+                "link": ""
+            },
+            {
+                "title": "T3ch Fest 2019",
+                "description": "Sin duda uno de los mayores eventos a nivel nacional desde hace ya unos años, asistí al evento con la gente de CanariasJS y disfruté de un evento completísimo y con un nivel que muchos desearían tener. ",
+                "image": "",
+                "link": ""
+            },
+            {
+                "title": "AdaloversConf 2019",
+                "description": "En su primera edición y con una organización de 10, pude asistir a este evento con la peculiaridad que las ponentes eran solamente mujeres, el vento estaba enfocado en dar visibilidad y animar a las mismas a seguir creciendo en este sector.",
+                "image": "",
+                "link": ""
+            },
+            {
+                "title": "Tenerife Lan Party - Innova",
+                "description": "La TLP ya tiene bastante fama entre los gamers de España, en este caso no pude asistir al evento principal pero pude ir a las charlas que se impartieron y como siempre me llenaron de conocimiento.",
+                "image": "",
+                "link": ""
+            },
+            {
+                "title": "Global Game Jam 2019",
+                "description": "",
+                "image": "",
+                "link": ""
+            },
+            {
+                "title": "Hack for Good 2018",
+                "description": "",
+                "image": "",
+                "link": ""
+            }
+        ],
         "toggle": false
     },
     {
         "id": 3,
         "title": "Charlas",
         "description": "A veces doy charlas, aunque estoy empezando en esto",
-        "posts": [],
+        "posts": [
+            {
+                "title": "NuxtJS: El framework de Vue",
+                "place": "JS Day Canarias III",
+                "description": "Próximamente",
+                "image": "",
+                "link": ""
+            },
+            {
+                "title": "Introducción a Typescript",
+                "place": "TLP Innova",
+                "description": "Como bien dice el título la charla trata sobre typescript, donde principalmente me centré en explicar la potencia que tiene y el por qué de implementarlo en nuestros proyectos",
+                "image": "",
+                "link": ""
+            },
+            {
+                "title": "Git Hooks",
+                "place": "Ultebra Lesson",
+                "description": "Con la idea en la cabeza de meter los git hooks en algún proyecto de la empresa, me preparé la charla y algunos ejemplos que subí al github. Enseñar lo interesante que puede ser implementar los git hooks y poder usar husky para hacerlo más dinámico.",
+                "image": "",
+                "link": ""
+            }
+        ],
         "toggle": false
     },
     {
         "id": 4,
         "title": "Formación",
         "description": "Me gusta tener una formación continuada para mejorar en todos los aspectos posibles, aquí te enseño un poco de lo que hago.",
-        "posts": [],
+        "posts": [
+            {
+                "title": "Máster Front End",
+                "school": "Lemoncode",
+                "description": "",
+                "image": ""
+            },
+            {
+                "title": "Curso de Javascript",
+                "school": "ULL",
+                "description": "",
+                "image": ""
+            },
+            {
+                "title": "CFGS Desarrollo Aplicaciones Multiplataforma",
+                "school": "IES El Rincón",
+                "description": "",
+                "image": ""
+            }
+        ],
         "toggle": false
     }
 ]
