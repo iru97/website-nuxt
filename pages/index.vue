@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid>
+  <div class="container">
       <!-- Header Section -->
-    <v-container
+    <div
       row
       fluid
       class="header"
@@ -33,7 +33,7 @@
       </v-layout>
     </v-container>
     <!-- Content Section -->
-    <v-container row>
+    <div class="content">
       <v-layout
         row
         wrap
@@ -144,21 +144,32 @@ return {
   // margin 0;
 }
 
-.header {
-  background-color: #303030;
-  color: white;
-  padding: 0 10%;
-  width:100%;
-  max-height: 40rem;
-  margin-bottom: 1%;
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-.content {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-    max-width: 100%;
-}
+.header { grid-area: 1 / 1 / 2 / 6; }
+.content { grid-area: 2 / 1 / 6 / 6; }
+
+// .header {
+//   background-color: #303030;
+//   color: white;
+//   padding: 0 10%;
+//   width:100%;
+//   max-height: 40rem;
+//   margin-bottom: 1%;
+// }
+
+// .content {
+//     width: 100%;
+//     margin-right: auto;
+//     margin-left: auto;
+//     padding-left: 2.4rem;
+//     padding-right: 2.4rem;
+//     max-width: 100%;
+// }
 </style>
