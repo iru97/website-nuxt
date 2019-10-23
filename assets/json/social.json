@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "twitter",
+        "link": "https://twitter.com/iruakabubi"
+    },
+    {
+        "id": 2,
+        "name": "linkedin",
+        "link": "https://linkedin.com/in/iru-hernandez"
+    },
+    {
+        "id": 3,
+        "name": "github",
+        "link": "https://github.com/iru97"
+    },
+    {
+        "id": 4,
+        "name": "instagram",
+        "link": "https://instagram.com/iruhernandez.dev"
+    }
+]
