@@ -18,6 +18,6 @@ export default {
 
 <style scoped>
 .title > h1 {
-    font-size: 110px;
+    font-size: 7rem;
 }
 </style>

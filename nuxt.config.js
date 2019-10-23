@@ -50,7 +50,8 @@ export default {
         // Doc: https://axios.nuxtjs.org/usage
         '@nuxtjs/axios',
         '@nuxtjs/eslint-module',
-        '@nuxtjs/svg-sprite'
+        '@nuxtjs/svg-sprite',
+        '@nuxtjs/pwa'
     ],
     /*
   ** Axios module configuration

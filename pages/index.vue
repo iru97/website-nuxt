@@ -2,8 +2,6 @@
   <div class="container">
       <!-- Header Section -->
     <div
-      row
-      fluid
       class="header"
     >
       <v-layout
@@ -38,8 +36,7 @@
         row
         wrap
         align-center
-        justify-center
-        style="height: 80%">
+        justify-center>
         <v-flex
           xs12
           :key="section.id"
@@ -56,6 +53,8 @@
 </template>
 
 <script>
+import socialMedia from '../assets/json/social.json'
+import sections from '../assets/json/sections.json'
 const Picture = () => import('../components/Picture.vue')
 const SocialMedia = () => import('../components/SocialMedia.vue')
 const Title = () => import('../components/Title.vue')
@@ -73,62 +72,10 @@ export default {
         SectionContent
     },
     asyncData() {
-return {
-            socialMedia: [
-                {
-                    id: 1,
-                    name: 'twitter',
-                    link: 'https://twitter.com/iruakabubi'
-                },
-                {
-                    id: 2,
-                    name: 'linkedin',
-                    link: 'https://linkedin.com/in/iru-hernandez'
-                },
-                {
-                    id: 3,
-                    name: 'github',
-                    link: 'https://github.com/iru97'
-                },
-                {
-                    id: 4,
-                    name: 'instagram',
-                    link: 'https://instagram.com/iruhernandez.dev'
-                }
-            ],
-            sections: [
-                {
-                    id: 1,
-                    title: '¿Quién soy?',
-                    description: 'Hola, me llamo Iru Hernández, me voy a presentar rápidamente. Soy una persona apasionado por esto del desarrollo web, principalmente me centro en tecnologías javascript como puedes ver, he trabajado con VueJS, Angular2+, NuxtJS, Bootstrap, NodeJS y ExpressJS entre otras. Soy un chico de 22 años que vive en las Islas Canarias, soy una persona que busca la mejora continua y el crecimiento personal y profesional, me gusta estar activo por redes, suelo participar en eventos locales y si puedo asistir a nacionales también lo hago.',
-                    toggle: false
-                },
-                {
-                    id: 2,
-                    title: 'Eventos',
-                    description: 'Algunos eventos a los que he asistido',
-                    posts: [],
-                    toggle: false
-                },
-                {
-                    id: 3,
-                    title: 'Charlas',
-                    description: 'A veces doy charlas, aunque estoy empezando en esto',
-                    posts: [],
-                    toggle: false
-                },
-                {
-                    id: 4,
-                    title: 'Formación',
-                    description: 'Me gusta tener una formación continuada para mejorar en todos los aspectos posibles, aquí te enseño un poco de lo que hago.',
-                    posts: [],
-                    toggle: false
-                }
-            ]
-        }
-    },
-    created() {
-      this.sections[0].toggle = true
+      return {
+        socialMedia,
+        sections
+      }
     },
     methods: {
       toggleSection(id) {
@@ -139,17 +86,16 @@ return {
 }
 </script>
 <style lang="stylus" scoped>
-// .container {
-//   padding: 0;
-//   // margin 0;
-// }
+* {
+      font-family: 'Abel', sans-serif !important;
+  }
 
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-row-gap: 20px;
 }
 
 .header {
@@ -157,7 +103,6 @@ return {
   background-color: #303030;
   color: white;
   padding: 0 10%;
-  width:100%;
 }
 .content { grid-area: 2 / 1 / 6 / 6; }
 
