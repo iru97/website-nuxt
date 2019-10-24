@@ -9,26 +9,26 @@
         wrap
         align-center
       >
-        <v-flex xs12 md6>
+        <v-flex md12>
           <Title :text="'Iru Hernández'" />
           <Subtitle :text="'Front End Developer'" />
-          <v-layout
-            row
-            wrap
-          >
-            <v-flex
-              v-for="media in socialMedia"
-              :key="media.id"
-              md2
-            >
-              <SocialMedia :name="media.name" :link="media.link" />
-            </v-flex>
-          </v-layout>
         </v-flex>
         <v-flex row xs12 md6>
-          <Picture />
+          <v-layout
+                row
+                wrap
+              >
+                <v-flex
+                  v-for="media in socialMedia"
+                  :key="media.id"
+                  md2
+                >
+                  <SocialMedia :name="media.name" :link="media.link" />
+                </v-flex>
+              </v-layout>
         </v-flex>
       </v-layout>
+
     </div>
     <!-- Content Section -->
     <div class="content">
@@ -57,7 +57,7 @@
 <script>
 import socialMedia from '../assets/json/social.json'
 import sections from '../assets/json/sections.json'
-const Picture = () => import('../components/Picture.vue')
+// const Picture = () => import('../components/Picture.vue')
 const SocialMedia = () => import('../components/SocialMedia.vue')
 const Title = () => import('../components/Title.vue')
 const Subtitle = () => import('../components/Subtitle.vue')
@@ -66,7 +66,7 @@ const SectionContent = () => import('../components/SectionContent.vue')
 
 export default {
     components: {
-        Picture,
+        // Picture,
         SocialMedia,
         Title,
         Subtitle,
@@ -95,8 +95,11 @@ export default {
 .header {
   background-color: #303030;
   color: white;
-  padding: 0 10%;
-  margin-bottom: 1%;
+  padding: 2% 12%;
+  margin-bottom: 3%;
+  background-image: url('../assets/images/profile.png')
+  background-position: 60%
+  background-size: 22rem
 }
 
 .content {
@@ -106,5 +109,17 @@ export default {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
     max-width: 100%;
+}
+
+@media (max-width: 1270px) {
+  .header {
+      background-image : none
+  }
+}
+
+@media (max-width: 959px) {
+  .header {
+      text-align : center
+  }
 }
 </style>

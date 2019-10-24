@@ -4,8 +4,8 @@
       :name="name"
       :title="name"
       :desc="`My ${name} profile`"
-      width="5rem"
-      height="5rem"
+      width="3rem"
+      height="3rem"
     />
   </a>
 </template>

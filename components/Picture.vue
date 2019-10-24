@@ -1,12 +1,12 @@
 <template>
-<div class="picture"> </div>
-  <!-- <img
+<!-- <div class="picture"> </div> -->
+  <img
     :src="image"
     alt="Iru Hernandez"
     class="profile"
     @mouseover="changeImageValue('profile_boo')"
     @mouseleave="changeImageValue('profile')"
-  > -->
+  >
 </template>
 
 <script>
