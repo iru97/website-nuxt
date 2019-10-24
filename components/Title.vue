@@ -23,7 +23,7 @@ export default {
 
 @media (max-width: 750px) {
   .title > h1 {
-    font-size: 5.5rem;
+    font-size: 5rem;
   }
  }
 
