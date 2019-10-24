@@ -46,7 +46,7 @@
         >
           <SectionBanner :id="section.id" :title="section.title" @click.native="toggleSection(section.id)" />
           <v-fade-transition>
-            <SectionContent v-show="section.toggle" :id="section.id" :description="section.description" :posts="section.posts" />
+            <SectionContent v-show="section.toggle" :id="section.id" :description="section.description"/>
           </v-fade-transition>
         </v-flex>
       </v-layout>
