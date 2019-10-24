@@ -112,6 +112,7 @@ export default {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
     max-width: 100%;
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 1270px) {
