@@ -31,10 +31,9 @@
 
     </div>
     <!-- Content Section -->
-    <div class="content">
+    <div>
       <v-layout
-        row
-        wrap
+        column
         align-center
         justify-center
       >
@@ -42,6 +41,7 @@
           v-for="section in sections"
           :key="section.id"
           xs12
+          md4
           class="content"
         >
           <SectionBanner :id="section.id" :title="section.title" @click.native="toggleSection(section.id)" />
@@ -100,6 +100,9 @@ export default {
   background-image: url('../assets/images/profile.png')
   background-position: 60%
   background-size: 22rem
+  &:hover {
+    background-image: url('../assets/images/profile_boo.png')
+  }
 }
 
 .content {
@@ -114,6 +117,9 @@ export default {
 @media (max-width: 1270px) {
   .header {
       background-image : none
+      &:hover{
+        background-image : none
+      }
   }
 }
 
