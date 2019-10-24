@@ -93,7 +93,8 @@ export default {
   }
 
 .header {
-  background-color: #303030;
+  background-color: #00c58e;
+  // background-color: #303030;
   color: white;
   padding: 2% 12%;
   margin-bottom: 3%;

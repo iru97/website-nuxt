@@ -22,12 +22,14 @@ export default {
 
 <style lang="stylus" scoped>
     .banner {
-        color: #555555;
+        color: white;
+        // color: #555555;
         padding: 1% 5%;
         cursor: pointer;
         margin: 1% 0;
-        border: 3px solid #555555;
+        border: 5px solid #00c58e;
         border-radius: 20px;
+        background-color: #2f495e;
     }
     .banner > h3 {
         font-size: 45px;
