@@ -18,6 +18,13 @@ export default {
 
 <style scoped>
 .title > h1 {
-    font-size: 110px;
+    font-size: 7rem;
 }
+
+@media (max-width: 750px) {
+  .title > h1 {
+    font-size: 5.5rem;
+  }
+ }
+
 </style>
