@@ -20,4 +20,11 @@ export default {
 .title > h1 {
     font-size: 7rem;
 }
+
+@media (max-width: 750px) {
+  .title > h1 {
+    font-size: 4.5rem;
+  }
+ }
+
 </style>

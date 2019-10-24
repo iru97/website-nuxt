@@ -1,11 +1,12 @@
 <template>
   <a :href="link" target="_blank" rel="noreferrer">
     <svg-icon
-        :name="name"
-        :title="name"
-        :desc="`My ${name} profile`"
-        width="60%"
-        height="100px"/>
+      :name="name"
+      :title="name"
+      :desc="`My ${name} profile`"
+      width="5rem"
+      height="5rem"
+    />
   </a>
 </template>
 

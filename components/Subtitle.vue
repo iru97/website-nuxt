@@ -18,6 +18,11 @@ export default {
 
 <style scoped>
 .subtitle > h2 {
-    font-size: 50px;
+    font-size: 4rem;
 }
+@media (max-width: 750px) {
+.subtitle > h2 {
+    font-size: 2.5rem;
+  }
+ }
 </style>

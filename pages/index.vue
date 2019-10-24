@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-      <!-- Header Section -->
+  <div>
+    <!-- Header Section -->
     <div
       class="header"
     >
@@ -14,11 +14,11 @@
           <Subtitle :text="'Front End Developer'" />
           <v-layout
             row
-            wrap>
+            wrap
+          >
             <v-flex
               v-for="media in socialMedia"
               :key="media.id"
-              xs6
               md2
             >
               <SocialMedia :name="media.name" :link="media.link" />
@@ -36,16 +36,18 @@
         row
         wrap
         align-center
-        justify-center>
+        justify-center
+      >
         <v-flex
-          xs12
-          :key="section.id"
           v-for="section in sections"
-          class="content">
-              <SectionBanner :id="section.id" :title="section.title" @click.native="toggleSection(section.id)"/>
-              <v-fade-transition>
-                <SectionContent v-show="section.toggle" :id="section.id" :description="section.description" :posts="section.posts"/>
-              </v-fade-transition>
+          :key="section.id"
+          xs12
+          class="content"
+        >
+          <SectionBanner :id="section.id" :title="section.title" @click.native="toggleSection(section.id)" />
+          <v-fade-transition>
+            <SectionContent v-show="section.toggle" :id="section.id" :description="section.description" :posts="section.posts" />
+          </v-fade-transition>
         </v-flex>
       </v-layout>
     </div>
@@ -72,16 +74,16 @@ export default {
         SectionContent
     },
     asyncData() {
-      return {
-        socialMedia,
-        sections
-      }
+        return {
+            socialMedia,
+            sections
+        }
     },
     methods: {
-      toggleSection(id) {
-        const section = this.sections.find(s => s.id === id)
-        this.$set(section, 'toggle', !section.toggle)
-      }
+        toggleSection(id) {
+            const section = this.sections.find(s => s.id === id)
+            this.$set(section, 'toggle', !section.toggle)
+        }
     }
 }
 </script>
@@ -90,37 +92,19 @@ export default {
       font-family: 'Abel', sans-serif !important;
   }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 20px;
-}
-
 .header {
-  grid-area: 1 / 1 / 2 / 6;
   background-color: #303030;
   color: white;
   padding: 0 10%;
+  margin-bottom: 1%;
 }
-.content { grid-area: 2 / 1 / 6 / 6; }
 
-// .header {
-//   background-color: #303030;
-//   color: white;
-//   padding: 0 10%;
-//   width:100%;
-//   max-height: 40rem;
-//   margin-bottom: 1%;
-// }
-
-// .content {
-//     width: 100%;
-//     margin-right: auto;
-//     margin-left: auto;
-//     padding-left: 2.4rem;
-//     padding-right: 2.4rem;
-//     max-width: 100%;
-// }
+.content {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    max-width: 100%;
+}
 </style>
