@@ -98,11 +98,11 @@ export default {
   color: white;
   padding: 2% 12%;
   margin-bottom: 3%;
-  background-image: url('../assets/images/profile.png')
+  background-image: url('~assets/images/profile.png')
   background-position: 60%
   background-size: 22rem
   &:hover {
-    background-image: url('../assets/images/profile_boo.png')
+    background-image: url('~assets/images/profile_boo.png')
   }
 }
 
