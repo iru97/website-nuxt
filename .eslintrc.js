@@ -4,18 +4,17 @@ module.exports = {
     browser: true,
     node: true
   },
-  parserOptions: {
-    parser: 'babel-eslint'
-  },
   extends: [
     '@nuxtjs',
-    'plugin:nuxt/recommended'
+    'plugin:nuxt/recommended',
+    '@nuxtjs/eslint-config-typescript'
   ],
   // add your custom rules here
   rules: {
     "quotes": ["error", "single"],
     "indent": ["warn", 4],
     "no-console": "off",
-    "allowTabIndentation": 0
+    "allowTabIndentation": 0,
+    "space-before-function-paren": 0
   }
 }

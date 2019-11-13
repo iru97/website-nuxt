@@ -78,6 +78,7 @@ export default {
             success: colors.green.accent3
         }
     },
+    buildModules: ['@nuxt/typescript-build'],
     /*
   ** Build configuration
   */
@@ -85,7 +86,7 @@ export default {
         /*
     ** You can extend webpack config here
     */
-        extend(config, ctx) {
+        extend () {
         }
     }
 }

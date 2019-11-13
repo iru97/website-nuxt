@@ -1,5 +1,5 @@
 <template>
-<!-- <div class="picture"> </div> -->
+  <!-- <div class="picture"> </div> -->
   <img
     :src="image"
     alt="Iru Hernandez"

@@ -1,31 +1,32 @@
 <template>
-<div class="sectionContent">
-  <p>{{ description }}</p>
-  <template v-if="posts.length > 0">
-    <v-col
+  <div class="sectionContent">
+    <p>{{ description }}</p>
+    <template v-if="posts.length > 0">
+      <v-col
+        v-for="post in posts"
         :key="post.title"
-        v-for="post in posts">
+      >
         <v-card class="card" dark>
-              <div class="d-flex">
-                <v-avatar
-                  class="ma-3"
-                  size="125"
-                  tile
-                >
-                  <v-img :src="post.image"></v-img>
-                </v-avatar>
-                <div>
-                  <v-card-title
-                    class="headline"
-                    v-text="post.title"
-                  ></v-card-title>
-                  <p>{{ post.description }}</p>
-                </div>
-              </div>
-            </v-card>
-    </v-col>
-  </template>
-</div>
+          <div class="d-flex">
+            <v-avatar
+              class="ma-3"
+              size="125"
+              tile
+            >
+              <v-img :src="post.image" />
+            </v-avatar>
+            <div>
+              <v-card-title
+                class="headline"
+                v-text="post.title"
+              />
+              <p>{{ post.description }}</p>
+            </div>
+          </div>
+        </v-card>
+      </v-col>
+    </template>
+  </div>
 </template>
 
 <script>

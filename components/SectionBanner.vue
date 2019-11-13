@@ -1,7 +1,7 @@
 <template>
-    <div class="banner">
+  <div class="banner">
     <h3>{{ title }}</h3>
-    </div>
+  </div>
 </template>
 
 <script>

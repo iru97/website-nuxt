@@ -1,19 +1,17 @@
 <template>
-    <div class="navbar">
-        <div class="navbar-content">
-
-        </div>
-    </div>
+  <div class="navbar">
+    <div class="navbar-content" />
+  </div>
 </template>
 
-<script>
+<script lang='ts'>
 export default {
     data() {
         return {
             langs: [
                 'ES',
                 'EN'
-            ]
+            ] as Array<string>
         }
     }
 }
