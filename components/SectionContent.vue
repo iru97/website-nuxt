@@ -1,52 +1,33 @@
 <template>
-  <div class="sectionContent">
-    <p>{{ description }}</p>
-    <template v-if="posts.length > 0">
-      <v-col
-        v-for="post in posts"
-        :key="post.title"
-      >
-        <v-card class="card" dark>
-          <div class="d-flex">
-            <v-avatar
-              class="ma-3"
-              size="125"
-              tile
-            >
-              <v-img :src="post.image" />
-            </v-avatar>
-            <div>
-              <v-card-title
-                class="headline"
-                v-text="post.title"
-              />
-              <p>{{ post.description }}</p>
-            </div>
-          </div>
-        </v-card>
-      </v-col>
-    </template>
+  <div class="sectionContent" >
+    <p>{{ section.description }} </p>
+    <v-col v-for="talk in section.talks" :key="talk.title">
+      <Talk v-bind="{ talk }"></Talk>
+    </v-col>
+    <v-col v-for="event in section.events" :key="event.title">
+      <!--<Event v-bind="{ event }"></Event>
+    </v-col>
+    <v-col v-for="course in section.courses" :key="course.title">
+      <Course v-bind="{ course }"></Course> -->
+    </v-col>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { SectionToogleable } from '../models'
+const Talk = () => import('../components/Talk.vue')
 export default {
-    name: 'SectionContent',
-    props: {
-        description: {
-            type: String,
-            required: true
-        },
-        id: {
-            type: Number,
-            required: true
-        },
-        posts: {
-            type: Array,
-            required: false,
-            default: () => []
-        }
+  name: 'SectionContent',
+  components: {
+    Talk
+  },
+  props: {
+    section: {
+      type: Object as () => SectionToogleable[],
+      required: false,
+      default: () => {}
     }
+  }
 }
 </script>
 
@@ -56,11 +37,5 @@ export default {
     }
     .sectionContent > p {
         font-size: 30px;
-    }
-    .card {
-        border: 2px black solid
-        padding : 3rem
-        margin-bottom : 3rem
-        text-align :left
     }
 </style>

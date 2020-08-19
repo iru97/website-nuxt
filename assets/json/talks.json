@@ -1,0 +1,23 @@
+[
+    {
+        "title": "NuxtJS: El framework de Vue",
+        "place": "JS Day Canarias III",
+        "description": "Próximamente",
+        "image": "",
+        "link": ""
+    },
+    {
+        "title": "Introducción a Typescript",
+        "place": "TLP Innova",
+        "description": "Como bien dice el título la charla trata sobre typescript, donde principalmente me centré en explicar la potencia que tiene y el por qué de implementarlo en nuestros proyectos",
+        "image": "",
+        "link": ""
+    },
+    {
+        "title": "Git Hooks",
+        "place": "Ultebra Lesson",
+        "description": "Con la idea en la cabeza de meter los git hooks en algún proyecto de la empresa, me preparé la charla y algunos ejemplos que subí al github. Enseñar lo interesante que puede ser implementar los git hooks y poder usar husky para hacerlo más dinámico.",
+        "image": "",
+        "link": ""
+    }
+]

@@ -45,7 +45,7 @@
         >
           <SectionBanner :id="section.id" :title="section.title" @click.native="toggleSection(section.id)" />
           <v-fade-transition>
-            <SectionContent v-show="section.toggle" :id="section.id" :description="section.description" />
+            <SectionContent v-show="section.toggle" :id="section.id" v-bind="{ section }" />
           </v-fade-transition>
         </v-flex>
       </v-layout>
@@ -55,7 +55,9 @@
 
 <script>
 import socialMedia from '../assets/json/social.json'
-import sections from '../assets/json/sections.json'
+import baseSections from '../assets/json/sections.json'
+// import { SectionToogleable } from '../models'
+
 // const Picture = () => import('../components/Picture.vue')
 const SocialMedia = () => import('../components/SocialMedia.vue')
 const Title = () => import('../components/Title.vue')
@@ -65,7 +67,6 @@ const SectionContent = () => import('../components/SectionContent.vue')
 
 export default {
     components: {
-        // Picture,
         SocialMedia,
         Title,
         Subtitle,
@@ -73,6 +74,7 @@ export default {
         SectionContent
     },
     asyncData() {
+        const sections = [...baseSections]
         return {
             socialMedia,
             sections

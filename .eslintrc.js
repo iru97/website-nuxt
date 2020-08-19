@@ -12,7 +12,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     "quotes": ["error", "single"],
-    "indent": ["warn", 4],
+    "indent": ["warn", 2],
     "no-console": "off",
     "allowTabIndentation": 0,
     "space-before-function-paren": 0
